@@ -35,6 +35,7 @@ func Play(s *bittorrent.Service) gin.HandlerFunc {
 		// NOIndex is the original torrent file next to download
 		index := ctx.Query("index")
 		oindex := ctx.Query("oindex")
+		fileMatch := ctx.Query("file_match")
 		nindex := ctx.Query("nindex")
 		noindex := ctx.Query("noindex")
 
@@ -75,6 +76,7 @@ func Play(s *bittorrent.Service) gin.HandlerFunc {
 			URI:               uri,
 			OriginalIndex:     originalIndex,
 			FileIndex:         fileIndex,
+			FileMatch:         fileMatch,
 			NextOriginalIndex: nextOriginalIndex,
 			NextFileIndex:     nextFileIndex,
 			ResumeHash:        resume,

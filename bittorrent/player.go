@@ -114,6 +114,7 @@ type PlayerParams struct {
 	Episode           int
 	AbsoluteNumber    int
 	Query             string
+	FileMatch         string
 	UpNextSent        bool
 	UIDs              *uid.UniqueIDs
 	Resume            *uid.Resume
